@@ -6,9 +6,10 @@ MaskUrl Will Help You To Mask Suspicious URLs And Make Them Look Legit Using URL
 Designed For Security Awareness Training And Authorized Penetration Testing
 
 If You Copy The Code And Make Your Own, Don't Forget To Give Me Some Credit Kid!
-Legal Disclaimer
 
-#### You Can Only Use This Tool For Educational Purposes, Remember That It Is Illegal To Scam Or Hack Others
+#### Legal Disclaimer
+
+##You Can Only Use This Tool For Educational Purposes, Remember That It Is Illegal To Scam Or Hack Others
 If You Get Caught, You're On Your Own
 Don't Come To Me And Blame Me For It
 
@@ -38,3 +39,4 @@ Don't Come To Me And Blame Me For It
 
 - cd maskurl
 - python maskurl.py
+
