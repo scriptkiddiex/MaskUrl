@@ -7,11 +7,13 @@ Designed For Security Awareness Training And Authorized Penetration Testing
 
 If You Copy The Code And Make Your Own, Don't Forget To Give Me Some Credit Kid!
 
-#### Legal Disclaimer
+## Legal Disclaimer
 
-## You Can Only Use This Tool For Educational Purposes, Remember That It Is Illegal To Scam Or Hack Others
-If You Get Caught, You're On Your Own
-Don't Come To Me And Blame Me For It
+## You Can Only Use This Tool For Educational Purposes.
+Using MaskUrl for illegal activities, unauthorized phishing, or malicious attacks is strictly prohibited.
+
+## You Are Responsible For Your Own Actions.
+The Developer Is Not Responsible For Any Misuse Or Damage Caused By This Tool.
 
 ## Features
 
@@ -39,5 +41,6 @@ Don't Come To Me And Blame Me For It
 
 - cd maskurl
 - python maskurl.py
+
 
 
