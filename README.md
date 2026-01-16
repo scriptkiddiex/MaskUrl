@@ -9,10 +9,9 @@ If You Copy The Code And Make Your Own, Don't Forget To Give Me Some Credit Kid!
 
 ## Legal Disclaimer
 
-## You Can Only Use This Tool For Educational Purposes.
+You Can Only Use This Tool For Educational Purposes.
 Using MaskUrl for illegal activities, unauthorized phishing, or malicious attacks is strictly prohibited.
-
-## You Are Responsible For Your Own Actions.
+You Are Responsible For Your Own Actions.
 The Developer Is Not Responsible For Any Misuse Or Damage Caused By This Tool.
 
 ## Features
@@ -41,6 +40,7 @@ The Developer Is Not Responsible For Any Misuse Or Damage Caused By This Tool.
 
 - cd maskurl
 - python maskurl.py
+
 
 
 
