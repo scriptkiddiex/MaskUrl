@@ -1,43 +1,40 @@
-MaskUrl (v1.0.0)
+# MaskUrl
 
-Author: ScriptKiddie
+**Coded By ScriptKiddie**
 
-MaskUrl is a Python-based utility designed for security awareness training and authorized penetration testing.
-It demonstrates common URL masking and social-engineering techniques used by attackers, helping organizations train users and evaluate security defenses.
+MaskUrl Will Help You To Mask Suspicious URLs And Make Them Look Legit Using URL Shorteners And Domain Tricks
+Designed For Security Awareness Training And Authorized Penetration Testing
 
-DISCLAIMER
+If You Copy The Code And Make Your Own, Don't Forget To Give Me Some Credit Kid!
+Legal Disclaimer
 
-MaskUrl is intended strictly for educational purposes, security research, and authorized testing only.
-Any misuse of this tool for illegal or unethical activities is strictly prohibited.
-The developer assumes no responsibility for misuse.
+#### You Can Only Use This Tool For Educational Purposes, Remember That It Is Illegal To Scam Or Hack Others
+If You Get Caught, You're On Your Own
+Don't Come To Me And Blame Me For It
 
-FEATURES
+## Features
 
-Multi-Engine Support
-Seamless integration with URL shortening services:
-TinyURL
-Da.gd
-Clck.ru
+- Interactive CLI menu
 
-Advanced Domain Masking
-Demonstrates @ symbol manipulation to visually overlay trusted domains
-(e.g., google.com, facebook.com).
+- Multiple URL shortening services support
 
-Contextual Keyword Injection
-Adds phishing-simulation keywords such as:
-login
-verify-account
-free-credit
+- Domain masking using @ symbol technique
 
-REQUIREMENTS
+- Phishing-style keyword injection
 
-Python 3.x
+- Easy and fast URL generation
 
-Internet connection
+#### Designed for phishing simulations and security training
 
-INSTALLATION
+## Requirements
 
-git clone https://github.com/scriptkiddiex/maskurl.git
+- Python 3.x
 
-cd maskurl
-python maskurl.py
+- Internet connection
+
+## Installation
+
+- git clone https://github.com/scriptkiddiex/maskurl.git
+
+- cd maskurl
+- python maskurl.py
