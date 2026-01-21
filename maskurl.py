@@ -32,18 +32,16 @@ def print_centered(text, color=""):
 
 
 def home_logo():
-    CYAN = "\033[96m\033[1m"
     logo = r"""
-M   M   A    SSSS K   K U   U RRRR  L     
-MM MM  A A  S     K  K  U   U R   R L     
-M M M AAAAA  SSS  KKK   U   U RRRR  L     
-M   M A   A     S K  K  U   U R  R  L     
-M   M A   A SSSS  K   K  UUU  R   R LLLLL 
+ _____ _____ _____ _____ _____ _____ __    
+|     |  _  |   __|  |  |  |  | __  |  |   
+| | | |     |__   |    -|  |  |    -|  |__ 
+|_|_|_|__|__|_____|__|__|_____|__|__|_____|
+                                           
     """
-    print_centered(logo, CYAN)
+    print_centered(logo)
 
 def home_about():
-    CYAN = "\033[96m\033[1m"
     about_text = (
         "╔════════════════════════════════════════════════════════════╗\n"
         "║  MaskUrl v1.0.2 | Created by ScriptKiddie                  ║\n"
@@ -51,7 +49,7 @@ def home_about():
         "║  Usage: For Educational & Authorized Testing Only          ║\n"
         "╚════════════════════════════════════════════════════════════╝"
     )
-    print_centered(about_text, CYAN)
+    print_centered(about_text)
 
 def validate_url(url):
     url = url.strip().lower()
@@ -75,19 +73,19 @@ def validate_phishing_keyword(keyword):
 def shortener_service(url):
     services = {1: "tinyurl", 2: "dagd", 3: "clckru"}
     
-    print("\n\033[94m[1] TinyURL | [2] Da.gd | [3] Clck.ru\033[0m")
+    print("\n[1] TinyURL | [2] Da.gd | [3] Clck.ru")
     
     try:
-        choice = int(input("\nSelect Service> "))
+        choice = int(input("\nSelect service [1-3]:  ").strip())
         if choice not in services:
-            print("\033[91m(!) Invalid Selection\033[0m")
+            print("[!]Invalid Selection")
             return "error"
 
         s = pyshorteners.Shortener()
         short_url = getattr(s, services[choice]).short(url)
         return short_url
     except Exception as e:
-        print(f"\033[91m(!) Shortening Error: {e}\033[0m")
+        print(f"[!]Shortening Error: {e}")
         return "error"
 
 def combiner(masked_url, domain_name, phishing_keyword):
@@ -99,45 +97,42 @@ def combiner(masked_url, domain_name, phishing_keyword):
 
 def urlmask():
     if not internet_connection():
-        print("\033[91m(!) No Internet Connection\033[0m")
+        print("[!]No Internet Connection")
         return
 
     try:
         print("\n")
-        raw_url = input("[?] Target URL (e.g., https://site.com): ").strip()
+        raw_url = input("\n[+]Target URL (e.g., https://site.com): ").strip()
         target_url = validate_url(raw_url)
         
         if not target_url:
-            print("\033[91m[!] Invalid URL format.\033[0m")
+            print("[!]Invalid URL format.")
             return
 
         masked_base = shortener_service(target_url)
         if masked_base == "error": return
 
 
-        fake_domain = input(" [?] Masking Domain (e.g., google.com): ").strip().lower()
+        fake_domain = input("\n[+]Masking Domain (e.g., google.com): ").strip().lower()
         if not validate_domain(fake_domain):
-            print("\033[91m[!] Invalid Domain format.\033[0m")
+            print("[!]Invalid Domain format.")
             return
 
-        phishing_key = input("[?]Add phishing keyword? (y/n): ").lower()
+        phishing_key = input("\n[+]Add phishing keyword? (y/n): ").lower()
         keyword = ""
         if phishing_key == 'y':
-            keyword = input("[?]Keyword (e.g., login, free): ").strip().lower()
+            keyword = input("\n[+]Keyword (e.g., login, free): ").strip().lower()
             if not validate_phishing_keyword(keyword):
-                print("\033[91m[!]Invalid Keyword.\033[0m")
+                print("[!]Invalid Keyword.")
                 return
 
 
         final_url = combiner(masked_base, fake_domain, keyword)
-        
-        print("\n" + "═"*50)
-        print("\033[92mSUCCESSFULLY MASKED\033[0m")
-        print(f"\033[97m\033[1m{final_url}\033[0m")
-        print("═"*50 + "\n")
+
+        print(f"\n[+]Masked URL=> {final_url}\n")
 
     except KeyboardInterrupt:
-        print("\n\n [!]Exiting...\n")
+        print("[!]Exit")
         sys.exit()
 
 if __name__ == "__main__":
